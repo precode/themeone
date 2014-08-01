@@ -14,7 +14,7 @@
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'themeone' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'themeone' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'themeone' ), 'Themeone', '<a href="http://themeterminal.com/" rel="designer">Theme Terminal</a>' ); ?>
+			<?php printf( __( 'Theme: %1$s by %2$s.', 'themeone' ), 'Themeone', '<a href="http://precode.io/" rel="designer">Precode</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

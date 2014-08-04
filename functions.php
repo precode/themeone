@@ -84,10 +84,31 @@ function themeone_widgets_init() {
 add_action( 'widgets_init', 'themeone_widgets_init' );
 
 /**
+ * Register Google Fonts
+ */
+function themeone_google_fonts() {
+
+	$protocol = is_ssl() ? 'https' : 'http';
+
+	/*	translators: If there are characters in your language that are not supported
+		by Open Sans, translate this to 'off'. Do not translate into your own language. */
+
+	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'themeone' ) ) {
+
+		wp_register_style( 'themeone-open-sans', "$protocol://fonts.googleapis.com/css?family=Open+Sans:400,700" );
+
+	}
+
+}
+add_action( 'init', 'themeone_google_fonts' );
+
+/**
  * Enqueue scripts and styles.
  */
 function themeone_scripts() {
 	wp_enqueue_style( 'themeone-style', get_stylesheet_uri() );
+
+	wp_enqueue_style( 'themeone-open-sans' );
 
 	wp_enqueue_script( 'themeone-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 

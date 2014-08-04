@@ -109,7 +109,7 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: "open sans", sans-serif;
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5;
@@ -118,7 +118,7 @@ textarea {
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
 	clear: both;
-	font-family: 'georgia', serif;
+	font-family: "open sans", sans-serif;
 	font-weight: bold;
 	margin-bottom: 17px;
 }

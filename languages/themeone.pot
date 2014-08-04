@@ -1,9 +1,9 @@
-# Copyright (C) 2014 Automattic
+# Copyright (C) 2014 Precode.io
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: _s 1.0-wpcom\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
+"Project-Id-Version: Themeone 1.0-wpcom\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/themeone\n"
 "POT-Creation-Date: 2014-03-30 17:37:52+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -273,25 +273,25 @@ msgid "Meta"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-msgid "_s"
+msgid "themeone"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://underscores.me/"
+msgid "https://github.com/precode/themeone"
 msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if "
+"Hi. I'm a starter theme called <code>Themeone</code>, if "
 "you like. I'm a theme meant for hacking so don't use me as a <em>Parent "
 "Theme</em>. Instead try turning me into the next, most awesome, WordPress "
 "theme out there. That's what I'm here for."
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Automattic"
+msgid "Precode.io"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://automattic.com/"
+msgid "http://precode.io/"
 msgstr ""

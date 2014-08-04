@@ -1,5 +1,5 @@
 Themeone
 ===
 
-Themeone is our starter theme we use to build our new premium WordPress themes.
+Themeone is our starter theme to help you build your own WordPress theme.\.
 

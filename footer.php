@@ -4,7 +4,7 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package themeone
+ * @package tcrs
  */
 ?>
 
@@ -12,9 +12,9 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'themeone' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'themeone' ), 'WordPress' ); ?></a>
+			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'tcrs' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'tcrs' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'themeone' ), 'Themeone', '<a href="http://precode.io/" rel="designer">Precode</a>' ); ?>
+			<?php printf( __( 'Theme: %1$s by %2$s.', 'tcrs' ), 'tcrs', '<a href="http://precode.io/" rel="designer">Precode</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

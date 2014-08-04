@@ -1,8 +1,8 @@
 <?php
 /**
- * themeone functions and definitions
+ * tcrs functions and definitions
  *
- * @package themeone
+ * @package tcrs
  */
 
 /**
@@ -12,7 +12,7 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
-if ( ! function_exists( 'themeone_setup' ) ) :
+if ( ! function_exists( 'tcrs_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -20,15 +20,15 @@ if ( ! function_exists( 'themeone_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function themeone_setup() {
+function tcrs_setup() {
 
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on themeone, use a find and replace
+	 * If you're building a theme based on tcrs, use a find and replace
 	 * to change '_s' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'themeone', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'tcrs', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -42,14 +42,14 @@ function themeone_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'themeone' ),
+		'primary' => __( 'Primary Menu', 'tcrs' ),
 	) );
 
 	// Enable support for Post Formats.
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 
 	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'themeone_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'tcrs_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
@@ -62,17 +62,17 @@ function themeone_setup() {
 		'gallery',
 	) );
 }
-endif; // themeone_setup
-add_action( 'after_setup_theme', 'themeone_setup' );
+endif; // tcrs_setup
+add_action( 'after_setup_theme', 'tcrs_setup' );
 
 /**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function themeone_widgets_init() {
+function tcrs_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'themeone' ),
+		'name'          => __( 'Sidebar', 'tcrs' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -81,44 +81,44 @@ function themeone_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
-add_action( 'widgets_init', 'themeone_widgets_init' );
+add_action( 'widgets_init', 'tcrs_widgets_init' );
 
 /**
  * Register Google Fonts
  */
-function themeone_google_fonts() {
+function tcrs_google_fonts() {
 
 	$protocol = is_ssl() ? 'https' : 'http';
 
 	/*	translators: If there are characters in your language that are not supported
 		by Open Sans, translate this to 'off'. Do not translate into your own language. */
 
-	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'themeone' ) ) {
+	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'tcrs' ) ) {
 
-		wp_register_style( 'themeone-open-sans', "$protocol://fonts.googleapis.com/css?family=Open+Sans:400,700" );
+		wp_register_style( 'tcrs-open-sans', "$protocol://fonts.googleapis.com/css?family=Open+Sans:400,700" );
 
 	}
 
 }
-add_action( 'init', 'themeone_google_fonts' );
+add_action( 'init', 'tcrs_google_fonts' );
 
 /**
  * Enqueue scripts and styles.
  */
-function themeone_scripts() {
-	wp_enqueue_style( 'themeone-style', get_stylesheet_uri() );
+function tcrs_scripts() {
+	wp_enqueue_style( 'tcrs-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'themeone-open-sans' );
+	wp_enqueue_style( 'tcrs-open-sans' );
 
-	wp_enqueue_script( 'themeone-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'tcrs-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'themeone-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'tcrs-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'themeone_scripts' );
+add_action( 'wp_enqueue_scripts', 'tcrs_scripts' );
 
 /**
  * Implement the Custom Header feature.

@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package themeone
+ * @package tcrs
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -28,7 +28,7 @@
 		</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle"><?php _e( 'Primary Menu', 'themeone' ); ?></button>
+			<button class="menu-toggle"><?php _e( 'Primary Menu', 'tcrs' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

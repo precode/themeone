@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package themeone
+ * @package tcrs
  */
 
 get_header(); ?>
@@ -24,46 +24,46 @@ get_header(); ?>
 							single_tag_title();
 
 						elseif ( is_author() ) :
-							printf( __( 'Author: %s', 'themeone' ), '<span class="vcard">' . get_the_author() . '</span>' );
+							printf( __( 'Author: %s', 'tcrs' ), '<span class="vcard">' . get_the_author() . '</span>' );
 
 						elseif ( is_day() ) :
-							printf( __( 'Day: %s', 'themeone' ), '<span>' . get_the_date() . '</span>' );
+							printf( __( 'Day: %s', 'tcrs' ), '<span>' . get_the_date() . '</span>' );
 
 						elseif ( is_month() ) :
-							printf( __( 'Month: %s', 'themeone' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'themeone' ) ) . '</span>' );
+							printf( __( 'Month: %s', 'tcrs' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'tcrs' ) ) . '</span>' );
 
 						elseif ( is_year() ) :
-							printf( __( 'Year: %s', 'themeone' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'themeone' ) ) . '</span>' );
+							printf( __( 'Year: %s', 'tcrs' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'tcrs' ) ) . '</span>' );
 
 						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-							_e( 'Asides', 'themeone' );
+							_e( 'Asides', 'tcrs' );
 
 						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
-							_e( 'Galleries', 'themeone');
+							_e( 'Galleries', 'tcrs');
 
 						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-							_e( 'Images', 'themeone');
+							_e( 'Images', 'tcrs');
 
 						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-							_e( 'Videos', 'themeone' );
+							_e( 'Videos', 'tcrs' );
 
 						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-							_e( 'Quotes', 'themeone' );
+							_e( 'Quotes', 'tcrs' );
 
 						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-							_e( 'Links', 'themeone' );
+							_e( 'Links', 'tcrs' );
 
 						elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
-							_e( 'Statuses', 'themeone' );
+							_e( 'Statuses', 'tcrs' );
 
 						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
-							_e( 'Audios', 'themeone' );
+							_e( 'Audios', 'tcrs' );
 
 						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
-							_e( 'Chats', 'themeone' );
+							_e( 'Chats', 'tcrs' );
 
 						else :
-							_e( 'Archives', 'themeone' );
+							_e( 'Archives', 'tcrs' );
 
 						endif;
 					?>
@@ -90,7 +90,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php themeone_paging_nav(); ?>
+			<?php tcrs_paging_nav(); ?>
 
 		<?php else : ?>
 

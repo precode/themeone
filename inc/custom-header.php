@@ -12,37 +12,37 @@
 	<?php endif; // End header image check. ?>
 
  *
- * @package themeone
+ * @package tcrs
  */
 
 /**
  * Setup the WordPress core custom header feature.
  *
- * @uses themeone_headerthemeonetyle()
- * @uses themeone_admin_headerthemeonetyle()
- * @uses themeone_admin_header_image()
+ * @uses tcrs_headertcrstyle()
+ * @uses tcrs_admin_headertcrstyle()
+ * @uses tcrs_admin_header_image()
  */
-function themeone_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'themeone_custom_header_args', array(
+function tcrs_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'tcrs_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'themeone_header_style',
-		'admin-head-callback'    => 'themeone_admin_header_style',
-		'admin-preview-callback' => 'themeone_admin_header_image',
+		'wp-head-callback'       => 'tcrs_header_style',
+		'admin-head-callback'    => 'tcrs_admin_header_style',
+		'admin-preview-callback' => 'tcrs_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'themeone_custom_header_setup' );
+add_action( 'after_setup_theme', 'tcrs_custom_header_setup' );
 
-if ( ! function_exists( 'themeone_header_style' ) ) :
+if ( ! function_exists( 'tcrs_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see themeone_custom_header_setup().
+ * @see tcrs_custom_header_setup().
  */
-function themeone_header_style() {
+function tcrs_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -75,15 +75,15 @@ function themeone_header_style() {
 	</style>
 	<?php
 }
-endif; // themeone_header_style
+endif; // tcrs_header_style
 
-if ( ! function_exists( 'themeone_admin_header_style' ) ) :
+if ( ! function_exists( 'tcrs_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see themeone_custom_header_setup().
+ * @see tcrs_custom_header_setup().
  */
-function themeone_admin_header_style() {
+function tcrs_admin_header_style() {
 ?>
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
@@ -103,15 +103,15 @@ function themeone_admin_header_style() {
 	</style>
 <?php
 }
-endif; // themeone_admin_header_style
+endif; // tcrs_admin_header_style
 
-if ( ! function_exists( 'themeone_admin_header_image' ) ) :
+if ( ! function_exists( 'tcrs_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see themeone_custom_header_setup().
+ * @see tcrs_custom_header_setup().
  */
-function themeone_admin_header_image() {
+function tcrs_admin_header_image() {
 	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
 	<div id="headimg">
@@ -123,4 +123,4 @@ function themeone_admin_header_image() {
 	</div>
 <?php
 }
-endif; // themeone_admin_header_image
+endif; // tcrs_admin_header_image

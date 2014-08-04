@@ -1,5 +1,5 @@
-Themeone
+Two Column Right Sidebar
 ===
 
-Themeone is our starter theme to help you build your own WordPress theme.
+Two Column Right Sidebar is a starter theme to help you build your own WordPress theme.
 

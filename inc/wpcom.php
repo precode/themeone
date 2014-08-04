@@ -4,7 +4,7 @@
  *
  * This file is centrally included from `wp-content/mu-plugins/wpcom-theme-compat.php`.
  *
- * @package themeone
+ * @package tcrs
  */
 
 /**
@@ -12,7 +12,7 @@
  *
  * @global array $themecolors
  */
-function themeone_wpcom_setup() {
+function tcrs_wpcom_setup() {
 	global $themecolors;
 
 	// Set theme colors for third party services.
@@ -26,4 +26,4 @@ function themeone_wpcom_setup() {
 		);
 	}
 }
-add_action( 'after_setup_theme', 'themeone_wpcom_setup' );
+add_action( 'after_setup_theme', 'tcrs_wpcom_setup' );

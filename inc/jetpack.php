@@ -3,17 +3,17 @@
  * Jetpack Compatibility File
  * See: http://jetpack.me/
  *
- * @package themeone
+ * @package tcrs
  */
 
 /**
  * Add theme support for Infinite Scroll.
  * See: http://jetpack.me/support/infinite-scroll/
  */
-function themeone_jetpack_setup() {
+function tcrs_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
 		'footer'    => 'page',
 	) );
 }
-add_action( 'after_setup_theme', 'themeone_jetpack_setup' );
+add_action( 'after_setup_theme', 'tcrs_jetpack_setup' );

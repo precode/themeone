@@ -26,6 +26,7 @@ and Blueprint http://www.blueprintcss.org/
 /*--------------------------------------------------------------
 Reset
 --------------------------------------------------------------*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -155,6 +156,7 @@ hr {
 	height: 1px;
 	margin-bottom: 33px;
 }
+
 /* Text elements */
 p {
 	margin-bottom: 34px;
@@ -445,21 +447,6 @@ label[class*="radio"], label[class*="checkbox"] {
 	position: absolute;
 	top: 0;
 	right: 0;
-}
-.search-form .search-submit:after {
-	content: "\f400";
-	display: inline-block;
-	width: 1em;
-	height: 1em;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-size: 1em;
-	line-height: 1;
-	font-family: 'Genericons';
-	text-decoration: inherit;
-	font-weight: normal;
-	font-style: normal;
-	vertical-align: top;
 }
 
 /* Password protected posts from */
@@ -759,28 +746,6 @@ Menu
 	}
 }
 
-.site-main .comment-navigation,
-.site-main .paging-navigation,
-.site-main .post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
-
-.comment-navigation .nav-previous,
-.paging-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
-}
-
-.comment-navigation .nav-next,
-.paging-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
-}
-
 
 /*--------------------------------------------------------------
 Content
@@ -834,6 +799,7 @@ Content
 /*--------------------------------------------------------------
 Post Formats
 --------------------------------------------------------------*/
+
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
 	display: none;

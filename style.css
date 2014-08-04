@@ -337,7 +337,9 @@ input[type="submit"] {
 		padding: 5px 10px;
 	}
 }
-button:hover, button:focus, button:active,
+button:hover,
+button:focus,
+button:active,
 input[type="button"]:hover,
 input[type="button"]:focus,
 input[type="button"]:active,
@@ -349,7 +351,9 @@ input[type="submit"]:focus,
 input[type="submit"]:active {
 	background: #333;
 }
-button:hover, button:focus, button:active,
+button:hover,
+button:focus,
+button:active,
 input[type="button"]:hover,
 input[type="button"]:focus,
 input[type="button"]:active,
@@ -661,6 +665,18 @@ Container
 
 
 /*--------------------------------------------------------------
+Masthead
+--------------------------------------------------------------*/
+
+.site-title{
+}
+.site-description{
+	font-size: 20px;
+	font-weight: 300;
+}
+
+
+/*--------------------------------------------------------------
 Menu
 --------------------------------------------------------------*/
 
@@ -680,6 +696,7 @@ Menu
 .main-navigation li {
 	float: left;
 	position: relative;
+	margin: 0 14px 0 0;
 }
 
 .main-navigation a {
@@ -736,13 +753,21 @@ Menu
 }
 
 @media screen and (max-width: 600px) {
-	.menu-toggle,
+	button.menu-toggle,
 	.main-navigation.toggled .nav-menu {
 		display: block;
+		background: #f0f0f0;
+		border: none;
+		color: #555;
 	}
-
 	.main-navigation ul {
 		display: none;
+		margin: 0;
+		padding: 10px;
+	}
+	.nav-menu li{
+		display: block;
+		float: none;
 	}
 }
 
@@ -754,7 +779,7 @@ Content
 .sticky {
 }
 .hentry {
-	margin: 0 0 1.5em;
+	margin: 0 0 4em;
 }
 .byline,
 .updated {
@@ -1063,6 +1088,10 @@ Responsive
 --------------------------------------------------------------*/
 
 @media screen and (max-width: 750px) {
+	#page{
+		margin: 0 auto;
+		padding: 40px;
+	}
 	.content-area {
 		float: none;
 		margin: 0;
